@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Hacktoberfest Fizzbuzz</title>
-  </head>
-  <body>
-    <div id="container"></div>
-  </body>
+</head>
 
-  <script charset="utf-8">
+<body>
+    <div id="container"></div>
+</body>
+
+<script charset="utf-8">
     const container = document.querySelector('#container');
 
-    for(let i = 0; i < 1000; i++) {
-      const node = document.createElement('div');
+    for (let i = 1; i < 1000; i++) {
+        const node = document.createElement('div');
 
-      if (i % 3 === 0 && i % 2 === 0) {
-        node.innerText = 'fizzbuzz';
-      }
-      else if(i % 3 === 0) {
-        node.innerText = 'buzz';
-      }
-      else if (i % 2 === 0) {
-        node.innerText  = 'fizz';
-      }
-      else {
-        node.innerText = 'None';
-      }
+        if (i % 3 === 0 && i % 5 === 0) {
+            node.innerText = 'fizzbuzz';
+            node.style.color = "blue";
+        } else if (i % 3 === 0) {
+            node.innerText = 'fizz';
+            node.style.color = "crimson";
+        } else if (i % 5 === 0) {
+            node.innerText = 'buzz';
+            node.style.color = "green";
+        } else {
+            node.innerText = 'None';
+            node.style.color = "purple";
+        }
 
-      node.innerText = i + ' - ' + node.innerText;
-      container.appendChild(node);
+        node.innerText = i + ' - ' + node.innerText;
+        container.appendChild(node);
     }
-  </script>
+</script>
+
 </html>
